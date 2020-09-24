@@ -223,10 +223,12 @@ form{
     justify-content: center;
 }
 
+/* pe mobile puteai linistita sa le lasi sa mearga pana la 100% din viewport ca si width */
 .inputs-wrapper div, .registration-wrapper{
 
     width: 250px;
 }
+
 input, textarea{
     width: 200px;
 }
