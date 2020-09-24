@@ -223,7 +223,8 @@ form{
     justify-content: center;
 }
 
-/* pe mobile puteai linistita sa le lasi sa mearga pana la 100% din viewport ca si width */
+/* pe mobile puteai linistita sa le lasi sa mearga 
+pana la 100% din viewport ca si width */
 .inputs-wrapper div, .registration-wrapper{
 
     width: 250px;
@@ -277,6 +278,9 @@ input, textarea{
 
 
 @media(max-width:600px){
+    html, body{
+        height: auto;
+    }
     header{
         height: 120px;
     }
@@ -296,7 +300,7 @@ input, textarea{
         display: block;
     }
     .gallery-wrapper{
-        height: 80%;
+        height: auto;
 
     }
     .gallery-wrapper, form,.inputs-wrapper{
@@ -320,6 +324,7 @@ input, textarea{
     .image-wrapper1,.image-wrapper2, .image-wrapper3,
 .image-wrapper4, .image-wrapper5, .image-wrapper6
 {
+    height: 150px;
     justify-content: center;
 }
     .first_title_image,.second_title_image{
