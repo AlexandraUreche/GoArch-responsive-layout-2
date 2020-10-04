@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sarala&display=swap" rel="stylesheet">
     <link href="bundles/font-awesome/css/all.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="resources/main.css">
@@ -20,18 +21,20 @@
          viewport, nu avem nimic impotriva scroll-ului vertical,
           iar pentru un layout de tipul asta cu asa multa informatie 
           este si pacat sa nu dai o alta experienta user-ului -->
-    <div class="content-wrapper">
+    <div class="content-wrapper" id="mainContent">
         <header>
             <div class="top-wrapper">
                 <div class="top-right-corner-wrapper">
                     <h2>go.arch</h2>
                     <div class="verticale-line"></div>
-                    <button type="button">
-                        <i class="fas fa-camera-retro"></i>
-                    </button>
-                    <button type="button">
-                        <i class="fab fa-facebook-f"></i>
-                    </button>
+                    <div class="social-icons">
+                        <div class="instagram-icon">
+                            <i class="fas fa-camera-retro"></i>
+                        </div>
+                        <div class="facebook-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="menu-wrapper">
@@ -43,7 +46,7 @@
                         <a target="_parent" href="index.html">Blog</a>
                         <a href="#contact">Contact us</a>
                     </nav>
-                    <nav class="menu-mobile">
+                    <nav class="menu-mobile" id="seeMobileWrapperBtn">
                         <a><i class="fas fa-bars"></i></a>
                     </nav>
                 </div>
@@ -92,41 +95,69 @@
             </div>
 
         </div>
-    </div>
-    <footer id="contact">
-        <div class="more_projects">
-            <button type="button">MORE PROJECTS</button>
-        </div>
-        <div class="contact-title">
-            <span>Get </span><span>in touch</span>
-        </div>
-        <form>
-            <div class="inputs-wrapper">
-            <div>
-                <input required class="input-validation" type="text" name="name_input" id="name" placeholder="Name" />
-                <input required class="input-validation" type="email" name="email_input" id="email"
-                    placeholder="Email" />
+        <footer id="contact">
+            <div class="more_projects">
+                <button type="button">MORE PROJECTS</button>
             </div>
-            <div>
+            <div class="contact-title">
+                <span>Get </span><span>in touch</span>
+            </div>
+            <form>
+                <div class="inputs-wrapper">
+                    <div>
+                        <input required class="input-validation" type="text" name="name_input" id="name"
+                            placeholder="Name" />
+                        <input required class="input-validation" type="email" name="email_input" id="email"
+                            placeholder="Email" />
+                    </div>
+                    <div>
 
-                <input required class="input-validation" type="number" name="phone_input" id="phone"
-                    placeholder="Phone" />
-                <input required class="input-validation" type="text" name="company_input" id="company"
-                    placeholder="Company" />
+                        <input required class="input-validation" type="number" name="phone_input" id="phone"
+                            placeholder="Phone" />
+                        <input required class="input-validation" type="text" name="company_input" id="company"
+                            placeholder="Company" />
+                    </div>
+                    <div>
+                        <textarea required class="input-validation" id="message" rows="4" cols="4" maxlength="250"
+                            placeholder="Message"></textarea>
+                    </div>
+                </div>
+                <div class="registration-wrapper">
+                    <button type="submit">
+                        SEND<i class="fas fa-long-arrow-alt-right"></i>
+                    </button>
+            </form>
+        </footer>
+    </div>
+    <div id="MobileWrapper" class="mobile-menu-wrapper hidden">
+        <div class="title-wrapper">
+            <h2>go arch</h2>
+            <div id="closeMobileMenuBtn" class="close-wrapper">
+                <img alt="icon close" src="assets/icon-close.png" />
             </div>
-            <div>
-                <textarea required class="input-validation" id="message" rows="4" cols="4" maxlength="250"
-                    placeholder="Message"></textarea>
-            </div>
-            </div>
-            <div class="registration-wrapper">
-                <button type="submit">
-                    SEND<i class="fas fa-long-arrow-alt-right"></i>
-                </button>
-        </form>
-       
         </div>
-    </footer>
+        <div class="list-menu">
+            <nav>
+                <a target="_parent" href="index.html">Home</a>
+                <a target="_parent" href="index.html">About us</a>
+                <a target="_parent" href="index.html">Projects</a>
+                <a target="_parent" href="index.html">Blog</a>
+                <a href="#contact">Contact us</a>
+            </nav>
+        </div>
+        <div class="social-icons">
+            <div class="instagram-icon">
+                <i class="fas fa-camera-retro"></i>
+            </div>
+            <div class="facebook-icon">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+        </div>
+    </div>
+    <script src="resources/main.js"></script>
+    <noscript>
+        Your browser currently does not support or has JS disabled.
+    </noscript>
 </body>
 
 </html>

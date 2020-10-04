@@ -4,13 +4,11 @@
 html, body{
     margin:0;
     padding: 0;
-    height: 100%;
     width: 100%;
    
 }
 .content-wrapper, footer{
     width: 100%;
-    overflow: hidden;
 }
 .content-wrapper{
     height: 65%;
@@ -37,7 +35,7 @@ header, .top-wrapper, .top-right-corner-wrapper, .title-wrapper,
 
 
 header{
-    height: 30%;
+    height: 250px;
     background-image: url(../assets/bg-header.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -63,19 +61,20 @@ form{
     width: 50%;
 }
 .top-wrapper{
-    height: 130px;
+    height: 150px;
     
 }
  .top-right-corner-wrapper{
     width: 120px;
-    height: auto;
+    height: 100%;
     background-color: #2b2b2b;
     text-transform: lowercase;
     padding: 10px;
    
 }
-.title-wrapper{
+header .title-wrapper{
     justify-content: flex-end;
+    padding:0 10px 60px 0;
 }
 h1,h2{
     margin: 0;
@@ -87,7 +86,7 @@ h1{
 
 }
 
-h2{
+header h2{
      width: 100%;
     text-align: center;
     font-size: 18px;
@@ -95,30 +94,23 @@ h2{
 }
 .verticale-line {
     border-left: 2px solid rgba(149,149,149);
-    height: 15px;
+    height: 25px;
    
 
 }
-.verticale-line, .top-right-corner-wrapper button{
-    margin: 5px;
+.verticale-line{
+    margin: 10px;
 }
 
-.top-right-corner-wrapper button{
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    font-size: 0;
-    cursor: pointer;
-    line-height: 0;
-    background-color:transparent;
-    color: transparent;
-    border: none;
-}
+
 .fab, .fas{
    
-    font-size: 18px;
+    font-size: 20px;
     color:rgba(149, 148, 149);
     text-align: center;
+}
+header .instagram-icon{
+    margin-bottom: 20px;
 }
 a, .menu-mobile .fa-bars, .more_projects button, 
 .registration-wrapper button,
@@ -142,7 +134,7 @@ a{
     justify-content: center;
     text-align: end;
 }
-.menu-mobile {
+.menu-mobile, .mobile-menu-wrapper.hidden {
     display: none;
 }
 
@@ -151,11 +143,10 @@ a{
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 70%;
 }
 .image-gallery{
     width: 33.33%;
-    height: 50%;
+    height: 300px;
 }
 .image-wrapper1,.image-wrapper2, .image-wrapper3,
 .image-wrapper4, .image-wrapper5, .image-wrapper6{
@@ -203,7 +194,6 @@ footer, form{
     font-family: 'Sarala', sans-serif;
 }
 footer{
-    height: 35%;
     background-color:  #2b2b2b;
     text-transform: uppercase;
 }
@@ -237,7 +227,9 @@ input, textarea{
     margin-bottom: 15px;
     height: 30px;
 }
-
+.inputs-wrapper div input:nth-child(2){
+    margin-bottom: 0;
+}
 .input-validation:required:invalid, .more_projects button,
 .registration-wrapper button
  {
@@ -252,7 +244,7 @@ input, textarea{
 
 .registration-wrapper, .more_projects{
     text-align: center;
-    padding-top: 15px;
+    padding: 15px;
 }
 
 .registration-wrapper button{
@@ -277,12 +269,10 @@ input, textarea{
 
 
 
-@media(max-width:600px){
-    html, body{
-        height: auto;
-    }
+@media(max-width:599px){
+    
     header{
-        height: 120px;
+        height: 150px;
     }
     .top-wrapper,.menu-wrapper{
         height: 100%;
@@ -291,6 +281,14 @@ input, textarea{
         width: 45%;
         height: 100px;
         font-size: 15px;
+        padding: 5px;
+    }
+    .verticale-line{
+        border-left: 3px solid rgba(149,149,149);
+        margin: 5px;
+    }
+    header .instagram-icon{
+        margin-bottom: 10px;
     }
     h2, .fas, .fab{
         font-size: 15px;
@@ -299,16 +297,13 @@ input, textarea{
     .menu-mobile{
         display: block;
     }
-    .gallery-wrapper{
-        height: auto;
-
-    }
+    
     .gallery-wrapper, form,.inputs-wrapper{
         flex-direction: column;
         flex-wrap: nowrap;
     }
-    .title-wrapper{
-        justify-content: flex-start;
+    header .title-wrapper{
+        padding: 0 50% 30px 0;
     }
     h1{
         font-size: 25px;
@@ -318,13 +313,11 @@ input, textarea{
 
     .image-gallery{
         width: 100%;
-        height: 20%;
         text-align: center;
     }
     .image-wrapper1,.image-wrapper2, .image-wrapper3,
 .image-wrapper4, .image-wrapper5, .image-wrapper6
 {
-    height: 150px;
     justify-content: center;
 }
     .first_title_image,.second_title_image{
@@ -337,6 +330,20 @@ input, textarea{
         padding: 0;
         
     }
+    .inputs-wrapper div, .registration-wrapper{
+
+        width:100%;
+        text-align: center;
+    }
+    .inputs-wrapper div{
+
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .inputs-wrapper div input:nth-child(2), .inputs-wrapper textarea{
+        margin-bottom: 10px;
+    }
     .first_title_image span:nth-child(2){
         color: #c09c78;
     }
@@ -344,6 +351,7 @@ input, textarea{
         margin-bottom: 10px;
         height: 25px;
     }
+    
     textarea{
         height: 50px;
     }
@@ -357,4 +365,77 @@ input, textarea{
     .menu-desktop,.more_projects{
         display: none;
     }
+    .content-wrapper{
+        z-index: 1;
+    }
+    #MobileWrapper{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: black;
+        z-index: 2;
+     }
+     .mobile-menu-wrapper .title-wrapper h2, .mobile-menu-wrapper nav{
+         color: white;
+         font-size: 25px;
+         padding: 10px 0 0 10px;
+     }
+     .mobile-menu-wrapper, .list-menu nav{
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+     }
+     .mobile-menu-wrapper .title-wrapper{
+         width: 100%;
+         height: 10%;
+         display: flex;
+         justify-content: space-between;
+     }
+    .mobile-menu-wrapper .title-wrapper .close-wrapper{
+         width: 35px;
+         height: 35px;
+         padding: 10px 10px 0 0;
+     }
+     .close-wrapper img{
+         width: 100%;
+         height: auto;
+     }
+     .mobile-menu-wrapper .social-icons{
+         height: 10%;
+     }
+     .mobile-menu-wrapper .social-icons, .mobile-menu-wrapper .social-icons div{
+         display: flex;
+     }
+     .mobile-menu-wrapper .social-icons div{
+         width: 50%;
+         justify-content: center;
+         align-items: center;
+         border: none;
+         border: 1px solid #fff;
+         border-bottom: none;
+     }
+     .mobile-menu-wrapper .social-icons div:first-child{
+         border-left: none;
+     }
+     .mobile-menu-wrapper .social-icons div:nth-child(2){
+         border-right: none;
+     }
+     .mobile-menu-wrapper nav{
+         font-family: 'Barlow', sans-serif;
+         font-size: 35px;
+         font-weight: 100;
+     }
+     .mobile-menu-wrapper nav a{
+         padding-bottom: 20px;
+         opacity: 0.6;
+     }
+     .mobile-menu-wrapper nav a:first-child{
+         opacity: unset;
+         font-weight: 400;
+     }
+     .mobile-menu-wrapper .social-icons .fas,
+      .mobile-menu-wrapper .social-icons .fab{
+         color: rgba(144,144,144);
+         font-size: 25px;
+     } 
 }
