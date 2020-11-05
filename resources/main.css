@@ -28,7 +28,7 @@ footer button{
 }
 header, .top-wrapper, .top-right-corner-wrapper, .title-wrapper,
 .menu-wrapper,.menu-wrapper:first-child,.top-right-corner-wrapper button, .menu-desktop,
-.gallery-wrapper,.image-wrapper,form, form .inputs-wrapper{
+.gallery-wrapper,.image-wrapper,form, form .inputs-wrapper, .title_and_favorite{
     display: flex;
 }
 
@@ -42,7 +42,7 @@ header{
   
 }
 header, .menu-wrapper, .menu-desktop,
-.image-wrapper{
+.image-wrapper, .title_and_favorite{
     justify-content: space-between;
 
 }
@@ -148,6 +148,7 @@ a{
 .image-wrapper{
     width: 100%;
     height: 100%;
+    background-image: url(../assets/bedroom-1.jpg);
     background-size: cover;
     background-position: center;
     opacity: 0.6;
@@ -244,6 +245,28 @@ input, textarea{
     padding-left: 5px;
 }
 
+.favorites-icon-wrapper {
+    width: 20px;
+    height: 20px;
+}
+
+.favorites-icon-wrapper img {
+    width: 100%;
+    height: auto;
+}
+.title_and_favorite .favorites-images {
+    width: 30px;
+    height: 30px;
+    margin: 10px 20px 0 0;
+    background-image: url('../assets/icon-heart-empty.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.title_and_favorite .favorites-images.selected {
+    background-image: url('../assets/icon-heart-full.png');
+}
 
 
 @media(max-width:599px){
