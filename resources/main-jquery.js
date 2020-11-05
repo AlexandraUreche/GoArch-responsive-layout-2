@@ -1,5 +1,4 @@
 $(function () {
-    console.log(PicturesArr.length);
     const seeMobileWrapperBtn = $('#seeMobileWrapperBtn');
     const closeMobileMenuBtn = $("#closeMobileMenuBtn");
     seeMobileWrapperBtn.click(function () {
@@ -23,9 +22,24 @@ $(function () {
         </div>
         `;
     };
-    for(let i = 0; i < PicturesArr.length; i++) {
-        let pictureObj = PicturesArr[i],
+    
+    for (let i = 0; i < picturesArr.length; i++) {
+        let pictureObj = picturesArr[i],
             pictureHMTL = getpropertyHTML(pictureObj);
-            galleryWrapper.append(pictureHMTL);
+        galleryWrapper.append(pictureHMTL);
     }
+
+    const seeMoreProjectsBtn = $('.more_projects');
+    seeMoreProjectsBtn.click(function () {
+            for (let i = 0; i < extraPicturesArr.length; i++) {
+                let pictureObj = extraPicturesArr[i],
+                    pictureHMTL = getpropertyHTML(pictureObj);
+                galleryWrapper.append(pictureHMTL);
+            }
+        
+    });
+    $('form').on('submit', function(e) {
+        e.preventDefault();
+        console.log('click');
+    });
 });

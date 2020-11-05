@@ -14,13 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Sarala&display=swap" rel="stylesheet">
     <link href="bundles/font-awesome/css/all.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="resources/main.css">
+    <script src="bundles/jquery/jquery-3.5.1.min.js"></script>
 </head>
 
 <body>
-    <!-- nu era deloc cerut sa limitezi height-ul doar la 100% din
-         viewport, nu avem nimic impotriva scroll-ului vertical,
-          iar pentru un layout de tipul asta cu asa multa informatie 
-          este si pacat sa nu dai o alta experienta user-ului -->
     <div class="content-wrapper" id="mainContent">
         <header>
             <div class="top-wrapper">
@@ -57,43 +54,13 @@
 
         </header>
         <div class="gallery-wrapper">
-            <div class="image-gallery">
-                <div class="image-wrapper1">
+           <!-- <div class="image-gallery">
+                <div class="image-wrapper" data-id="1">
                     <div class="first_title_image"><span>Concert Hall </span><span>New York</span></div>
                     <div class="second_title_image">Arhitecture</div>
                 </div>
             </div>
-            <div class="image-gallery">
-                <div class="image-wrapper2">
-                    <div class="first_title_image"><span>Modern bedroom </span><span>in Gorizia</span></div>
-                    <div class="second_title_image">Interior</div>
-                </div>
-            </div>
-            <div class="image-gallery">
-                <div class="image-wrapper3">
-                    <div class="first_title_image"><span>Modern Hotel </span><span>in London</span></div>
-                    <div class="second_title_image">Arhitecture</div>
-                </div>
-            </div>
-            <div class="image-gallery">
-                <div class="image-wrapper4">
-                    <div class="first_title_image"><span>Modern bedroom </span><span>in Paris</span></div>
-                    <div class="second_title_image">Interior</div>
-                </div>
-            </div>
-            <div class="image-gallery">
-                <div class="image-wrapper5">
-                    <div class="first_title_image"><span>Nodern Library </span><span>in Chicago</span></div>
-                    <div class="second_title_image">Arhitecture</div>
-                </div>
-            </div>
-            <div class="image-gallery">
-                <div class="image-wrapper6">
-                    <div class="first_title_image"><span>Modern kitchen </span><span>in Bucharest</span></div>
-                    <div class="second_title_image">Interior</div>
-                </div>
-            </div>
-
+            -->
         </div>
         <footer id="contact">
             <div class="more_projects">
@@ -112,7 +79,7 @@
                     </div>
                     <div>
 
-                        <input required class="input-validation" type="number" name="phone_input" id="phone"
+                        <input required class="input-validation" type="tel" name="phone_input" id="phone"
                             placeholder="Phone" />
                         <input required class="input-validation" type="text" name="company_input" id="company"
                             placeholder="Company" />
@@ -154,7 +121,8 @@
             </div>
         </div>
     </div>
-    <script src="resources/main.js"></script>
+    <script src="resources/main-jquery.js"></script>
+    <script src="resources/dataImages.js"></script>
     <noscript>
         Your browser currently does not support or has JS disabled.
     </noscript>
