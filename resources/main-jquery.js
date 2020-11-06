@@ -25,27 +25,27 @@ $(function () {
         </div>
         `;
     };
-
-    for (let i = 0; i < picturesArr.length; i++) {
-        let pictureObj = picturesArr[i],
-            pictureHMTL = getpropertyHTML(pictureObj);
-        galleryWrapper.append(pictureHMTL);
-    }
-
     const seeMoreProjectsBtn = $('.more_projects');
-    seeMoreProjectsBtn.click(function () {
-        for (let i = 0; i < extraPicturesArr.length; i++) {
-            let pictureObj = extraPicturesArr[i],
+    for (let i = 0; i < picturesArr.length; i++) {
+        if (i < 6) {
+            let pictureObj = picturesArr[i],
                 pictureHMTL = getpropertyHTML(pictureObj);
             galleryWrapper.append(pictureHMTL);
         }
-
+    }
+    seeMoreProjectsBtn.click(function () {
+        for (let i = 6; i < picturesArr.length; i++) {
+            let pictureObj = picturesArr[i],
+                pictureHMTL = getpropertyHTML(pictureObj);
+            galleryWrapper.append(pictureHMTL);
+        }
     });
 
-    $('.favorites-images').click(function(){
+
+    $('.favorites-images').click(function () {
         console.log('click');
-        const id=$(this).parents('.image-wrapper').data('id');
-        $(this).toggleClass('selected');
+        const id = $(this).parents('.image-wrapper').data('id');
+        $(this).addClass('selected');
     });
 
     $('form').on('submit', function (e) {
