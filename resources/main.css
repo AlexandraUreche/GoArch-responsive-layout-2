@@ -111,6 +111,7 @@ header .instagram-icon{
 }
 a, .menu-mobile .fa-bars, .more_projects button, 
 .registration-wrapper button,
+.favorites-content-wrapper .title-wrapper button,
 .fa-long-arrow-alt-right{
      color:#fff;
 }
@@ -224,17 +225,20 @@ input, textarea{
     text-align: center;
     padding: 15px;
 }
-
 .registration-wrapper button{
-    background-color: #c09c78; 
     width: 80px;
+}
+.registration-wrapper button, .favorites-content-wrapper .title-wrapper button {
+    background-color: #c09c78; 
+    
    
 }
 .more_projects button{
     width: 140px;
 }
 
-.more_projects button, .registration-wrapper button{
+.more_projects button, .registration-wrapper button
+{
     border-radius: 50px;
     height: 30px;
     font-size: 12px;
@@ -246,8 +250,8 @@ input, textarea{
 }
 
 .favorites-icon-wrapper {
-    width: 20px;
-    height: 20px;
+    width: 21px;
+    height: 21px;
 }
 
 .favorites-icon-wrapper img {
@@ -267,8 +271,60 @@ input, textarea{
 .title_and_favorite .favorites-images.selected {
     background-image: url('../assets/icon-heart-full.png');
 }
+.favorites-icon-wrapper .favorites-number {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    color: red;
+    position: absolute;
+    top: 11px;
+    right: 10px;
+    font-size: 10px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 15px;
+    display: none;
+}
+.favorites-content-wrapper {
+    display: none;
+    padding: 50px;
+    text-transform: capitalize;
+    font-size: 18px;
+  
+}
 
+.favorites-content-wrapper .title-wrapper {
+    display: flex;
+    justify-content: space-between;
+   
+}
 
+.favorites-content-wrapper .title-wrapper h1 {
+    font-size: 35px;
+    font-weight: 700;
+    padding-bottom: 30px;
+    color: black;
+
+}
+.favorites-content-wrapper .image-gallery{
+    margin-bottom: 25px;
+}
+.favorites-content-wrapper .favorites-images{
+    display: none;
+}
+.favorites-content-wrapper .title-wrapper button {
+    height: 50px;
+    position: relative;
+    top: 40px;
+    border: none;
+    border-radius: 30px;
+}
+.removed-pictures{
+    color: black;
+    text-transform: initial;
+    font-size: 18px;
+}
 @media(max-width:599px){
     
     header{
