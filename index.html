@@ -10,9 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sarala&display=swap" rel="stylesheet">
     <link href="bundles/font-awesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bundles/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="resources/main.css">
     <script src="bundles/jquery/jquery-3.5.1.min.js"></script>
 </head>
@@ -42,9 +44,9 @@
                         <a target="_parent" href="index.html">Projects</a>
                         <a target="_parent" href="index.html">Blog</a>
                         <a href="#contact">Contact us</a>
-                        <a class="favorites-icon-wrapper">
+                        <!--<a class="favorites-icon-wrapper">
                             <img src="assets/icon-heart-full-white.png">
-                            <div class="favorites-number"></div>
+                            <div class="favorites-number"></div></a>-->
                     </nav>
                     <nav class="menu-mobile" id="seeMobileWrapperBtn">
                         <a><i class="fas fa-bars"></i></a>
@@ -56,8 +58,9 @@
             </div>
 
         </header>
-        <div class="gallery-wrapper">
-           <!-- <div class="image-gallery">
+        <div class="container-fluid no-gutters">
+            <div class="row no-gutters">
+                <!--<div class="col col-4"> 
                 <div class="image-wrapper" data-id="1">
                     <div class="title_and_favorite">
                     <div class="first_title_image"><span>Concert Hall </span><span>New York</span></div>
@@ -67,7 +70,9 @@
                     <div class="second_title_image">Arhitecture</div>
                 </div>
             </div>
+            </div>
             -->
+            </div>
         </div>
         <div class="favorites-content-wrapper">
             <div class="title-wrapper">
@@ -111,7 +116,7 @@
             </form>
         </footer>
     </div>
-    <div id="MobileWrapper" class="mobile-menu-wrapper hidden">
+   <div id="MobileWrapper" class="mobile-menu-wrapper hidden">
         <div class="title-wrapper">
             <h2>go arch</h2>
             <div id="closeMobileMenuBtn" class="close-wrapper">

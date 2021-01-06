@@ -28,7 +28,7 @@ footer button{
 }
 header, .top-wrapper, .top-right-corner-wrapper, .title-wrapper,
 .menu-wrapper,.menu-wrapper:first-child,.top-right-corner-wrapper button, .menu-desktop,
-.gallery-wrapper,.image-wrapper,form, form .inputs-wrapper, .title_and_favorite{
+.image-wrapper,form, form .inputs-wrapper, .title_and_favorite{
     display: flex;
 }
 
@@ -92,8 +92,6 @@ header h2{
 .verticale-line {
     border-left: 2px solid rgba(149,149,149);
     height: 25px;
-   
-
 }
 .verticale-line{
     margin: 10px;
@@ -105,6 +103,9 @@ header h2{
     font-size: 20px;
     color:rgba(149, 148, 149);
     text-align: center;
+}
+.menu-mobile .fas{
+    padding-right: 10px;
 }
 header .instagram-icon{
     margin-bottom: 20px;
@@ -134,17 +135,6 @@ a{
 }
 .menu-mobile, .mobile-menu-wrapper.hidden, .hidden {
     display: none;
-}
-
-
-.gallery-wrapper{
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.image-gallery{
-    width: 33.33%;
-    height: 300px;
 }
 .image-wrapper{
     width: 100%;
@@ -307,7 +297,7 @@ input, textarea{
     color: black;
 
 }
-.favorites-content-wrapper .image-gallery{
+.favorites-content-wrapper .container{
     margin-bottom: 25px;
 }
 .favorites-content-wrapper .favorites-images{
@@ -325,8 +315,19 @@ input, textarea{
     text-transform: initial;
     font-size: 18px;
 }
+.container-fluid{
+    padding: unset;    
+}
+.col{
+    height: 300px;
+}
+
+
+
 @media(max-width:599px){
-    
+    .col{
+        min-width: 100%;
+    }
     header{
         height: 150px;
     }
@@ -351,10 +352,12 @@ input, textarea{
     }
     
     .menu-mobile{
-        display: block;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
     }
     
-    .gallery-wrapper, form,.inputs-wrapper{
+ form,.inputs-wrapper{
         flex-direction: column;
         flex-wrap: nowrap;
     }
@@ -367,10 +370,6 @@ input, textarea{
          justify-content: center;
     }
 
-    .image-gallery{
-        width: 100%;
-        text-align: center;
-    }
     .image-wrapper{
         justify-content: center;
     }
@@ -493,4 +492,11 @@ input, textarea{
          color: rgba(144,144,144);
          font-size: 25px;
      } 
+     .favorites-icon-wrapper .favorites-number{
+        width: 10px;
+        height: 10px;
+        font-size: 7px;
+        line-height: unset;
+     }
+     
 }
